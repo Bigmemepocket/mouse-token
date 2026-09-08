@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>$MOUSE — Hold the Mouse Tight</title>
+<meta name="description" content="$MOUSE — the meme coin for hunters of the next 1000x. Hold the mouse tight as you scroll through the tokens. Catch the gem." />
+<meta property="og:title" content="$MOUSE — Hold the Mouse Tight" />
+<meta property="og:description" content="Hold the mouse tight. Scroll through the tokens. Catch the next 1000x gem." />
+<meta property="og:image" content="./assets/mouse-promo-tothemoon.webp" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="$MOUSE — Hold the Mouse Tight" />
+<meta name="twitter:description" content="Hold the mouse tight. Scroll through the tokens. Catch the next 1000x gem." />
+<meta name="twitter:image" content="./assets/mouse-promo-tothemoon.webp" />
+<link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+<link rel="apple-touch-icon" href="./assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bricolage+Grotesque:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<!-- animated background -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
+<!-- floating cheese particles -->
+<div class="particles" id="particles" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#top" class="brand" aria-label="$MOUSE home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="3" y="9" width="26" height="16" rx="8" fill="currentColor" opacity="0.18"/>
+          <rect x="3" y="9" width="26" height="16" rx="8" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 5v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="16" cy="6" r="2" fill="currentColor"/>
+          <line x1="3" y1="15" x2="29" y2="15" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+        </svg>
+      </span>
+      <span class="brand-text">$MOUSE</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tokenomics">Tokenomics</a></li>
+      <li><a href="#how-to-buy">How to Buy</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn btn-ghost" id="ca-quick-copy" data-copy="">CA</button>
+      <a class="btn btn-primary" href="#contract">Get $MOUSE</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="pill" data-reveal>🧀 The meme cycle is here</span>
+      <h1 class="hero-title" data-reveal>Hold the<br/><span class="grad">Mouse</span> tight.</h1>
+      <p class="hero-sub" data-reveal>
+        You want to catch the next 1000x? You'll have to scroll through
+        hundreds of tokens to find the gem. Hold the mouse tight —
+        $MOUSE is the grip that gets you there.
+      </p>
+      <div class="hero-cta" data-reveal>
+        <a class="btn btn-primary btn-lg" href="#contract">Get $MOUSE</a>
+        <a class="btn btn-ghost btn-lg" href="#about">The Lore</a>
+      </div>
+      <div class="hero-stats" data-reveal>
+        <div class="stat"><b>1B</b><span>Total Supply</span></div>
+        <div class="stat"><b>0%</b><span>Tax</span></div>
+        <div class="stat"><b>LP 🔒</b><span>Burned</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" data-reveal>
+      <div class="coin-wrap">
+        <img src="./assets/mouse-token-logo.webp" alt="$MOUSE token mascot — a fierce mouse gripping a computer mouse" width="560" height="560" class="coin" />
+        <div class="coin-glow"></div>
+        <div class="coin-ring"></div>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>HOLD THE MOUSE TIGHT 🖱️</span><span>SCROLL TO HUNT 1000x GEMS 🧀</span><span>$MOUSE IS THE GRIP 💪</span><span>HOLD THE MOUSE TIGHT 🖱️</span><span>SCROLL TO HUNT 1000x GEMS 🧀</span><span>$MOUSE IS THE GRIP 💪</span><span>HOLD THE MOUSE TIGHT 🖱️</span><span>SCROLL TO HUNT 1000x GEMS 🧀</span><span>$MOUSE IS THE GRIP 💪</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRACT ADDRESS -->
+<section class="section" id="contract">
+  <div class="container narrow">
+    <div class="ca-card" data-reveal>
+      <span class="ca-label">Contract Address</span>
+      <div class="ca-row">
+        <code class="ca-value" id="caValue">Paste your CA address here</code>
+        <button class="btn btn-primary" id="copyCa" aria-label="Copy contract address">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span id="copyCaLabel">Copy</span>
+        </button>
+      </div>
+      <p class="ca-hint">Update the CA in <code>script.js</code> — set <code>CONTRACT_ADDRESS</code>. The page will live in seconds.</p>
+      <p class="ca-status" id="caStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / LORE -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-copy" data-reveal>
+        <span class="eyebrow">The Lore</span>
+        <h2 class="section-title">In a world of tokens,<br/>only the grip survives.</h2>
+        <p>
+          The season is memes. New tokens launch every minute — some are
+          gems, most are traps. The difference between the hunter and the
+          hunted is the grip on the mouse.
+        </p>
+        <p>
+          <strong>$MOUSE</strong> is the mascot of the scroll. The tighter
+          you hold, the faster you spot the 1000x before it runs. We don't
+          promise millions — we promise you'll never let go.
+        </p>
+        <ul class="lore-list" role="list">
+          <li>🖱️ Built by scrollers, for scrollers</li>
+          <li>🧀 Community-owned, fair launch energy</li>
+          <li>🚀 Meme-first, community-forever</li>
+        </ul>
+      </div>
+      <div class="col-visual" data-reveal>
+        <img src="./assets/mouse-promo-hunt.webp" alt="A mouse hunting for 1000x tokens on a glowing trading screen" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOKENOMICS -->
+<section class="section section-alt" id="tokenomics">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Tokenomics</span>
+      <h2 class="section-title">Fair. Simple. Tight.</h2>
+      <p class="section-lead">A supply built to be held — not dumped.</p>
+    </div>
+    <div class="token-grid" data-reveal>
+      <div class="token-card">
+        <span class="token-num">1,000,000,000</span>
+        <span class="token-name">Total Supply</span>
+        <span class="token-bar"><i style="width:100%"></i></span>
+      </div>
+      <div class="token-card">
+        <span class="token-num">85%</span>
+        <span class="token-name">Liquidity Pool (Burned & Locked)</span>
+        <span class="token-bar"><i style="width:85%"></i></span>
+      </div>
+      <div class="token-card">
+        <span class="token-num">10%</span>
+        <span class="token-name">Community & Airdrops</span>
+        <span class="token-bar"><i style="width:10%"></i></span>
+      </div>
+      <div class="token-card">
+        <span class="token-num">5%</span>
+        <span class="token-name">Marketing & Listings</span>
+        <span class="token-bar"><i style="width:5%"></i></span>
+      </div>
+    </div>
+    <div class="tax-row" data-reveal>
+      <div class="tax-pill">Buy Tax <b>0%</b></div>
+      <div class="tax-pill">Sell Tax <b>0%</b></div>
+      <div class="tax-pill">LP <b>Locked 🔒</b></div>
+      <div class="tax-pill">Contract <b>Renounced</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO BUY -->
+<section class="section" id="how-to-buy">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">How to Buy</span>
+      <h2 class="section-title">Four grips to $MOUSE</h2>
+    </div>
+    <ol class="steps" role="list">
+      <li class="step" data-reveal>
+        <span class="step-num">1</span>
+        <h3>Get a wallet</h3>
+        <p>Install a non-custodial wallet like MetaMask or Phantom. Fund it with SOL or ETH.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-num">2</span>
+        <h3>Hold the mouse tight</h3>
+        <p>Open your favourite dex (Raydium, Uniswap) and connect your wallet.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-num">3</span>
+        <h3>Paste the $MOUSE CA</h3>
+        <p>Copy the contract address from above and paste it into the swap. Confirm $MOUSE.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-num">4</span>
+        <h3>Scroll & hold</h3>
+        <p>Swap, hold tight, and ride the scroll. Welcome to the grip club. 🖱️</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section section-alt" id="roadmap">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Roadmap</span>
+      <h2 class="section-title">The scroll ahead</h2>
+    </div>
+    <div class="roadmap" data-reveal>
+      <div class="phase done">
+        <span class="phase-tag">Phase 1</span>
+        <h3>The Grip</h3>
+        <ul role="list"><li>✅ Idea & mascot</li><li>✅ Fair launch setup</li><li>✅ Website live</li></ul>
+      </div>
+      <div class="phase">
+        <span class="phase-tag">Phase 2</span>
+        <h3>The Scroll</h3>
+        <ul role="list"><li>⬜ Community growth</li><li>⬜ X / Telegram launch</li><li>⬜ Influencer raids</li></ul>
+      </div>
+      <div class="phase">
+        <span class="phase-tag">Phase 3</span>
+        <h3>The Hunt</h3>
+        <ul role="list"><li>⬜ CEX listings</li><li>⬜ Hold-the-mouse leaderboard</li><li>⬜ Merch drop</li></ul>
+      </div>
+      <div class="phase">
+        <span class="phase-tag">Phase 4</span>
+        <h3>The 1000x</h3>
+        <ul role="list"><li>⬜ Utility arcade mini-game</li><li>⬜ Partnerships</li><li>⬜ Moon. 🌙</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY / X PROMO -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">The Wall</span>
+      <h2 class="section-title">Hold. Scroll. Share.</h2>
+      <p class="section-lead">Official $MOUSE art. Right-click, save, post to X. Let the grip spread.</p>
+    </div>
+    <div class="gallery" data-reveal>
+      <figure class="g-item g-wide"><img src="./assets/mouse-promo-tothemoon.webp" alt="Mouse riding a computer-mouse rocket to a green moon" loading="lazy" /><figcaption>To the moon, one scroll at a time.</figcaption></figure>
+      <figure class="g-item"><img src="./assets/mouse-promo-mountain.webp" alt="Mouse standing on a mountain of cheese and coins" loading="lazy" /><figcaption>Secured the cheese.</figcaption></figure>
+      <figure class="g-item"><img src="./assets/mouse-promo-grip.webp" alt="Close up of a mouse paw gripping a computer mouse" loading="lazy" /><figcaption>Never let go.</figcaption></figure>
+      <figure class="g-item g-wide"><img src="./assets/mouse-promo-hunt.webp" alt="Mouse hunting 1000x gems on a trading screen" loading="lazy" /><figcaption>Hunting the 1000x.</figcaption></figure>
+      <figure class="g-item"><img src="./assets/mouse-promo-late-night.webp" alt="Mouse trading late at night by monitor glow" loading="lazy" /><figcaption>The late-night grip.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="section join-cta" id="join">
+  <div class="container narrow">
+    <div class="join-card" data-reveal>
+      <h2 class="section-title">Join the grip club.</h2>
+      <p>Hold the mouse tight. The 1000x gems don't scroll to you.</p>
+      <div class="join-socials">
+        <a class="btn btn-primary" href="#" rel="noopener">X / Twitter</a>
+        <a class="btn btn-ghost" href="#" rel="noopener">Telegram</a>
+        <a class="btn btn-ghost" href="#" rel="noopener">Chart</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <div class="footer-brand">
+      <span class="brand-text">$MOUSE</span>
+      <span class="footer-tag">Hold the mouse tight. 🖱️</span>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#how-to-buy">How to Buy</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <p class="disclaimer">
+      $MOUSE is a meme coin with no intrinsic value or expectation of
+      financial return. Nothing on this site is financial advice. Crypto is
+      volatile — do your own research and only risk what you can afford to
+      lose.
+    </p>
+  </div>
+</footer>
+
+<!-- scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<script src="./script.js" defer></script>
+</body>
+</html>
